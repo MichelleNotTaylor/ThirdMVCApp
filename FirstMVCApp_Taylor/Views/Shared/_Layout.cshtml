@@ -9,22 +9,27 @@
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-fixed-top">
-    <a class="navbar-brand" href="@Url.Action("Index", "Home")">BlueLight Games</a>
-
-    <div>
-        <ul class="navbar-nav">
-            <li class="navbar-item active">
-                <a class="navbar-link" href="@Url.Action("Index", "Home")">Home</a>
-            </li>
-            <li class="navbar-item">
-                <a class="navbar-link" href="@Url.Action("Index", "Student")">Student</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
     <div class="container body-content">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">BlueLight Games</a>
+            <div>
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="@Url.Action("Index", "Home")">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="@Url.Action("Index", "AboutUs")">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">Games</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="@Url.Action("Index", "Game")">Navigator</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         @RenderBody()
         <hr />
         <footer>
@@ -32,7 +37,7 @@
         </footer>
     </div>
 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
 </html>
