@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueLight Games</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-fixed-top">
+    <a class="navbar-brand" href="@Url.Action("Index", "Home")">BlueLight Games</a>
+
+    <div>
+        <ul class="navbar-nav">
+            <li class="navbar-item active">
+                <a class="navbar-link" href="@Url.Action("Index", "Home")">Home</a>
+            </li>
+            <li class="navbar-item">
+                <a class="navbar-link" href="@Url.Action("Index", "Student")">Student</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Michelle Taylor</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
